@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Python virtual environments
+.venv/
+venv/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
