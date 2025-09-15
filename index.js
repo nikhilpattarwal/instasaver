@@ -45,7 +45,8 @@ app.post('/download', verifyToken, (req, res) => {
   if (!url) return res.status(400).json({ status: 'error', message: 'URL is required' });
 
   const scriptPath = path.join(__dirname, 'download.py');
-  const pythonProcess = spawn('python3', [scriptPath, url]);
+
+  const pythonProcess = spawn('./venv/bin/python', [scriptPath, url]);
 
   let result = '';
   pythonProcess.stdout.on('data', (data) => { result += data.toString(); });
